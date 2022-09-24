@@ -16,18 +16,23 @@ class _GridViewDemoState extends State<GridViewDemo> {
         crossAxisSpacing: 10,
         mainAxisSpacing: 10,
         children: List.generate(20, (index) {
-          return Container(
-            decoration: BoxDecoration(
-              color: Colors.amber,
-              borderRadius: BorderRadius.circular(10),
-            ),
-            child: Center(
-              child: Text(
-                '$index',
-                style: TextStyle(
-                    color: Colors.blue,
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold),
+          return GestureDetector(
+            onTap: () {
+              print('$index');
+            },
+            child: Container(
+              decoration: BoxDecoration(
+                color: Colors.amber,
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Center(
+                child: Text(
+                  '$index',
+                  style: TextStyle(
+                      color: Colors.blue,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold),
+                ),
               ),
             ),
           );
